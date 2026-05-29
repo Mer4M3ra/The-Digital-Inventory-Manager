@@ -32,6 +32,17 @@ class product:
     
 
 
-class inventory:
+class Inventory:
     def __init__(self):
         self.products = {}
+
+    def add_product(self, product):
+        self.products[product.product_id] = product
+
+    def display_all(self):
+        return f"{self.products}"
+
+if __name__ == "__main__":
+# runs the main file
+    print("Welcome to the inventory manager")
+    inventory = Inventory()
