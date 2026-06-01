@@ -42,7 +42,17 @@ class Inventory:
     def display_all(self):
         return f"{self.products}"
 
+def Start():
+    print("Welcome to the inventory manager")
+    while True:
+        print("/n 1. Add new product")
+        print("/n 2. View stock")
+        print("/n 3. Update stock")
+        print("/n 4. Exit")
+        Choice = input("What option woulod you like to choose")
+        if Choice == 1:
+            Inventory.add_product()
+
 if __name__ == "__main__":
 # runs the main file
-    print("Welcome to the inventory manager")
-    inventory = Inventory()
+    Start()
